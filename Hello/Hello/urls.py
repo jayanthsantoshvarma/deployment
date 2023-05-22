@@ -21,5 +21,7 @@ admin.site.site_header = "Jayanth Admin Page"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("home.urls"))
+    path('', include("home.urls")),
+    # path('handwritten_digit_recognition_model/', include('src.urls')),
+    # path('/titanic_survival_predictor/', include("base.urls")),
 ]

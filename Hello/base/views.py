@@ -1,16 +1,4 @@
-from django.shortcuts import render, HttpResponse 
-
-# Create your views here.
-def index(request):
-    context = {
-        'variable': "Sent OK"
-    }
-    return render(request, "index.html", context)
-    # return HttpResponse("Homepage")
-
-def hdr(request):
-    return render(request, "handwritten_digit_recognition.html", {"context": "Image"})
-
+from django.shortcuts import render
 import pickle
 
 def home(request):
@@ -46,4 +34,3 @@ def result(request):
                             parch, fare, embC, embQ, embS)
 
     return render(request, 'result.html', {'result': result})
-
